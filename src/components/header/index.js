@@ -6,12 +6,9 @@ import {
   HeaderContainer,
   HeaderWrapper,
   BlogTitle,
-  NavLink,
+  ThemeToggleContainer,
 } from "./header.style"
-import Switch from "../switch"
 const title = "CodeIdeas"
-const homeLink = "Home"
-const blogLink = "Blog"
 const DARK = "dark"
 const Header2 = props => {
   const themeConsumer = React.useContext(ThemeContext)
@@ -23,13 +20,9 @@ const Header2 = props => {
           <BlogTitle>{title}</BlogTitle>
         </div>
         <div>
-          <NavLink to="#">{homeLink}</NavLink>
-          <NavLink to="#">{blogLink}</NavLink>
-          {/* <button onClick={themeConsumer.toggleTheme}>Dark mode</button> */}
-          <Switch
-            onToggle={themeConsumer.toggleTheme}
-            checked={themeConsumer.theme === DARK}
-          />
+          <ThemeToggleContainer onClick={themeConsumer.toggleTheme}>
+            {themeConsumer.theme === DARK ? "☀️" : "🌙"}
+          </ThemeToggleContainer>
         </div>
       </HeaderWrapper>
     </HeaderContainer>

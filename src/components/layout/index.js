@@ -48,7 +48,7 @@ const Layout = ({ children }) => {
       <Global
         styles={css`
           html {
-            font-family: sans-serif;
+            font-family: Montserrat, sans-serif;
             -ms-text-size-adjust: 100%;
             -webkit-text-size-adjust: 100%;
             margin: 0;

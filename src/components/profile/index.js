@@ -1,6 +1,12 @@
 import React from "react"
-import { ProfileWrapper, Info, ImageWrapper } from "./profile.style"
+import {
+  ProfileWrapper,
+  Info,
+  ImageWrapper,
+  TwitterLink,
+} from "./profile.style"
 import Image from "../image"
+import { Link } from "gatsby"
 const Profile = () => {
   return (
     <ProfileWrapper>
@@ -9,7 +15,9 @@ const Profile = () => {
       </ImageWrapper>
 
       <Info>
-        Mohammad Abed - Front End Engineer<br /> ReactJs enthusiast.
+        <TwitterLink href="https://www.twitter.com"> Mohammad Abed</TwitterLink>{" "}
+        - Front End Engineer
+        <br /> ReactJs enthusiast.
       </Info>
     </ProfileWrapper>
   )

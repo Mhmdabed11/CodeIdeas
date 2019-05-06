@@ -12,8 +12,8 @@ export const Info = styled.p`
   padding: 0 1rem;
   margin-top: 0;
   overflow: hidden;
-  word-break: break-all;
 `
 export const ImageWrapper = styled.div`
   display: flex;
 `
+export const TwitterLink = styled.a``

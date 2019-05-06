@@ -1,5 +1,4 @@
 import styled from "@emotion/styled"
-import { Link } from "gatsby"
 export const HeaderContainer = styled.div`
   background-color: #000000;
   color: #ffffff;
@@ -20,12 +19,19 @@ export const BlogTitle = styled.h1`
   font-family: Montserrat, sans-serif;
   margin: 0;
 `
-export const NavLink = styled(Link)`
-  color: #ffffff;
-  text-decoration: none;
-  font-family: Montserrat, sans-serif;
-  margin-right: 0.75rem;
-  &:last-of-type {
-    margin-right: 0;
+export const ThemeToggleContainer = styled.button`
+  background-color: #ffffff;
+  border: none;
+  font-size: 25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  line-height: 50px;
+  &:focus {
+    box-shadow: 0 0 2px 3px #ffa7c4;
+    outline: none;
+  }
+  &:active {
+    box-shadow: 0 0 2px 3px #ffa7c4;
   }
 `
