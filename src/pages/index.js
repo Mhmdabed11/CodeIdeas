@@ -1,8 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-
 import Layout from "../components/layout/index"
-import Image from "../components/image"
 import SEO from "../components/seo"
 import Profile from "../components/profile"
 import PostCard from "../components/post card"
@@ -16,6 +14,7 @@ const IndexPage = () => {
               title
               date
               slug
+              description
             }
             excerpt
           }
@@ -33,7 +32,7 @@ const IndexPage = () => {
             key={edge.node.frontmatter.slug}
             title={edge.node.frontmatter.title}
             date={edge.node.frontmatter.date}
-            description={edge.node.excerpt}
+            description={edge.node.frontmatter.description}
             slug={edge.node.frontmatter.slug}
           />
         )

@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Code Ideas`,
+    description: `A personal blog where I write about the latest news and technologies in web development.`,
+    author: `@mhmdabed18`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -17,7 +17,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
-        path: `${__dirname}/src/posts`,
+        path: `./posts`,
       },
     },
     {
@@ -33,6 +33,16 @@ module.exports = {
         defaultLayouts: {
           default: require.resolve("./src/components/layout"),
         },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 500,
+              wrapperStyle:
+                " margin-left: 0!important; margin-right: 0!important;",
+            },
+          },
+        ],
       },
     },
     `gatsby-transformer-remark`,

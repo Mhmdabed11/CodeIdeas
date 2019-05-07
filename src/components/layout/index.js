@@ -64,7 +64,6 @@ const Layout = ({ children }) => {
             -moz-osx-font-smoothing: grayscale;
             background-color: ${theme === LIGHT ? BG_LIGHT : BG_DARK};
             color: ${theme === LIGHT ? TYP_LIGHT : TYP_DARK};
-            transition: background-color 0.2s ease-in, color 0.2s ease-in;
             font-family: "Merriweather", "Georgia", serif;
           }
         `}

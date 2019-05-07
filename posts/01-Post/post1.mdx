@@ -1,0 +1,98 @@
+---
+title: Things you need to know before writing your first react application
+date: Feb 28, 2019
+description: Top things you need to be aware of which will make your first experience with React much easier.
+slug: things-you-need-to-know-before-writing-your-first-react-app
+image: ../images/gatsby-icon.png
+---
+
+<!-- ![Hola](../images/gatsby-icon.png) -->
+
+import Code from "../../src/components/code"
+
+import {
+  codeBlock01,
+  codeBlock02,
+  codeBlock03,
+  codeBlock04,
+  codeBlock05,
+  codeBlock06,
+  codeBlock07,
+  codeBlock08,
+  codeBlock09,
+  codeBlock10,
+} from "./code-snippets"
+
+## Brief Introduction to React
+
+Released on May 29, 2013 and written by Jordan Walke (Facebook engineer), React is a declarative JavaScript library for building simple and complex user interfaces.
+
+The building blocks of any React application are components. According to the official docs, React applications are made up of encapsulated components that manage their own state, then compose them to make complex UIs.
+
+## Why Should you Use React ?
+
+- **Reusability**: Since React is a component-based library, you can write a component one time and use it anywhere in your application.
+
+- **Simplicity**: React is so easy to use right out of the box. It uses a special syntax called JSX, giving you the ability to write HTML and JavaScript together.
+
+  <Code code={codeBlock01} />
+
+- **Straightforward**: Anyone with a background in HTML, CSS and JavaScript will find React very fun and easy to learn.
+
+---
+
+## Things you need to know
+
+### State
+
+Each React class component has a state where you can declare variables you want to use throughout your entire component. You can access any variable in the state by writing :
+
+<Code code={codeBlock02} />
+
+Updating the state in a react app may be asynchronous, so avoid mutating it directly. Instead, you should update the state using **setState**.
+
+<Code code={codeBlock03} />
+
+The **setState** takes a callback which executes when the state is updated successfully. This is a good place to perform an action which depends on the updated value in state.
+
+<Code code={codeBlock04} />
+
+In some cases, a variable inside a component’s state may be an array or any JavaScript object. In JavaScript, objects are immutable. They are passed by reference. In other words, if you pass an object to a variable, they will both refer to the same object. So, if you mutate one of them, the change will be reflected to the other as well. This may cause performance issues in your application and may not re-render the component if you call **_setState_** after direct mutation. To solve this issue, you can use the immutability-helper package here.
+
+## Props
+
+A React component accepts props which can be passed to it from its parent. Props are parameters which allow components to be fully customizable and reusable. For example, if you have an **Img** component in React, you can pass the **src** as props to control what the image shows.
+
+<Code code={codeBlock05} />
+
+Props are read-only and they can never be modified. For more about props, you can refer to the documentation here.
+
+## Component Lifecycle
+
+Each React component follows a cycle from when it is created and rendered to the DOM, to when it is unmounted and destroyed. We call this cycle a lifecycle, during which the component provides a set of methods referred to as **lifecycle methods**. I will be discussing below three of these methods. The remaining methods can be found in the official docs.
+
+- **ComponentDidMount**: This method gets called after the component gets rendered to the DOM. This is a good place to fetch data from a server and update the component’s state.
+
+<Code code={codeBlock06} />
+
+- **ComponentDidUpdate** : This method gets called after the component updates. It is not called for the initial render. This method is a good place to make API calls and update the state after comparing previous props to current props. Not comparing the values of previous and current props will result in executing the body of this method on every update of the component. This results in an infinite loop and can cause performance issues.
+
+<Code code={codeBlock07} />
+
+- **ComponentWillUnmount**: This method gets called before the component is unmounted and destroyed. It is a good place to cancel HTTP requests, invalidate timers and unsubscribe from any subscriptions made in ComponentDidMount.
+
+  <Code code={codeBlock08} />
+
+## Functional Components and Class Components
+
+In React, there are two types of components:
+
+- **Functional Components** — A functional component is a function that takes in props and returns JSX. Usually it doesn’t have a state or lifecycle methods. In React version 16.8, Hooks were introduced. They allow functional components to use state and perform side effects. For more about hooks, click here.
+
+<Code code={codeBlock09} />
+
+- **Class Components** — A class component is a normal ES6 class which accepts props, and has a state and lifecycle methods.
+
+<Code code={codeBlock10} />
+
+Functional components are simpler and easier to debug and maintain. If you have a class component with a render method only, it is advisable to turn it into a functional component.

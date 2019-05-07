@@ -7,7 +7,6 @@ import {
   PostLink,
 } from "./postcard.style"
 const PostCard = ({ title, description, date, slug }) => {
-  console.log(slug)
   return (
     <PostContainer>
       <PostTitle>{title}</PostTitle>
