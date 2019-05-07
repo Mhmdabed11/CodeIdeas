@@ -34,8 +34,16 @@ export const ThemeToggleContainer = styled.button`
   &:active {
     box-shadow: 0 0 2px 3px #ffa7c4;
   }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 export const BlogTitleLink = styled(Link)`
   text-decoration: none;
   color: unset;
+`
+export const Img = styled.img`
+  width: 30px;
+  height: 30px;
+  margin: 0;
 `

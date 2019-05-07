@@ -1,6 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
 import { ThemeContext } from "../layout/index"
 import {
   HeaderContainer,
@@ -8,12 +6,17 @@ import {
   BlogTitle,
   ThemeToggleContainer,
   BlogTitleLink,
+  Img,
 } from "./header.style"
+
 const title = "CodeIdeas"
 const DARK = "dark"
+
+const moonImage = <Img src={require("../../../assets/moon.png")} alt="moon" />
+const sunImage = <Img src={require("../../../assets/sun.png")} alt="sun" />
+
 const Header2 = props => {
   const themeConsumer = React.useContext(ThemeContext)
-  console.log(themeConsumer)
   return (
     <HeaderContainer>
       <HeaderWrapper>
@@ -22,7 +25,7 @@ const Header2 = props => {
         </BlogTitleLink>
         <div>
           <ThemeToggleContainer onClick={themeConsumer.toggleTheme}>
-            {themeConsumer.theme === DARK ? "☀️" : "🌙"}
+            {themeConsumer.theme === DARK ? sunImage : moonImage}
           </ThemeToggleContainer>
         </div>
       </HeaderWrapper>

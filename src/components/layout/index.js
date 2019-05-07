@@ -27,7 +27,7 @@ const { Provider } = ThemeContext
 const Layout = ({ children }) => {
   const [theme, setTheme] = React.useState(null)
   // toggle theme function using React.useCallback to memoize version of function and not create one on each render
-  React.useEffect(() => {
+  React.useLayoutEffect(() => {
     const mode = localStorage.getItem("mode")
     if (mode) setTheme(mode)
     else setTheme(LIGHT)
