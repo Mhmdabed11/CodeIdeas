@@ -9,12 +9,13 @@ import PostCard from "../components/post card"
 const IndexPage = () => {
   const posts = useStaticQuery(graphql`
     {
-      allMarkdownRemark {
+      allMdx {
         edges {
           node {
             frontmatter {
               title
               date
+              slug
             }
             excerpt
           }
@@ -26,12 +27,14 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
       <Profile />
-      {posts.allMarkdownRemark.edges.map(edge => {
+      {posts.allMdx.edges.map(edge => {
         return (
           <PostCard
+            key={edge.node.frontmatter.slug}
             title={edge.node.frontmatter.title}
             date={edge.node.frontmatter.date}
             description={edge.node.excerpt}
+            slug={edge.node.frontmatter.slug}
           />
         )
       })}

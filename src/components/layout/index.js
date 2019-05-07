@@ -18,6 +18,10 @@ import { MainWrapper } from "./index.style.js"
 
 const LIGHT = "light"
 const DARK = "dark"
+const BG_DARK = "#10171e"
+const BG_LIGHT = "#e6ecf0"
+const TYP_DARK = "rgba(255,255,255,0.8)"
+const TYP_LIGHT = "#14171a"
 export const ThemeContext = React.createContext()
 const { Provider } = ThemeContext
 const Layout = ({ children }) => {
@@ -48,20 +52,20 @@ const Layout = ({ children }) => {
       <Global
         styles={css`
           html {
-            font-family: Montserrat, sans-serif;
             -ms-text-size-adjust: 100%;
             -webkit-text-size-adjust: 100%;
             margin: 0;
-            paddding: 0;
+            padding: 0;
           }
           body {
             margin: 0;
             padding: 0;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            background-color: ${theme === LIGHT ? "#ffffff" : "#000000"};
-            color: ${theme === LIGHT ? "#000000" : "#ffffff"};
+            background-color: ${theme === LIGHT ? BG_LIGHT : BG_DARK};
+            color: ${theme === LIGHT ? TYP_LIGHT : TYP_DARK};
             transition: background-color 0.2s ease-in, color 0.2s ease-in;
+            font-family: "Merriweather", "Georgia", serif;
           }
         `}
       />

@@ -7,6 +7,7 @@ import {
   HeaderWrapper,
   BlogTitle,
   ThemeToggleContainer,
+  BlogTitleLink,
 } from "./header.style"
 const title = "CodeIdeas"
 const DARK = "dark"
@@ -16,9 +17,9 @@ const Header2 = props => {
   return (
     <HeaderContainer>
       <HeaderWrapper>
-        <div>
+        <BlogTitleLink to="/">
           <BlogTitle>{title}</BlogTitle>
-        </div>
+        </BlogTitleLink>
         <div>
           <ThemeToggleContainer onClick={themeConsumer.toggleTheme}>
             {themeConsumer.theme === DARK ? "☀️" : "🌙"}

@@ -1,4 +1,5 @@
 import styled from "@emotion/styled"
+import { Link } from "gatsby"
 export const HeaderContainer = styled.div`
   background-color: #000000;
   color: #ffffff;
@@ -16,7 +17,6 @@ export const HeaderWrapper = styled.div`
 export const BlogTitle = styled.h1`
   font-weight: 900;
   text-rendering: optimizeLegibility;
-  font-family: Montserrat, sans-serif;
   margin: 0;
 `
 export const ThemeToggleContainer = styled.button`
@@ -34,4 +34,8 @@ export const ThemeToggleContainer = styled.button`
   &:active {
     box-shadow: 0 0 2px 3px #ffa7c4;
   }
+`
+export const BlogTitleLink = styled(Link)`
+  text-decoration: none;
+  color: unset;
 `
