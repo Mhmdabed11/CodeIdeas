@@ -19,7 +19,7 @@ export const BlogTitle = styled.h1`
   text-rendering: optimizeLegibility;
   margin: 0;
 `
-export const ThemeToggleContainer = styled.button`
+export const ThemeToggleContainer = styled.div`
   background-color: transparent;
   border: none;
   font-size: 25px;

@@ -8,7 +8,7 @@ import {
   BlogTitleLink,
   Img,
 } from "./header.style"
-
+import { css } from "@emotion/core"
 const title = "CodeIdeas"
 const DARK = "dark"
 
@@ -24,7 +24,10 @@ const Header2 = props => {
           <BlogTitle>{title}</BlogTitle>
         </BlogTitleLink>
         <div>
-          <ThemeToggleContainer onClick={themeConsumer.toggleTheme}>
+          <ThemeToggleContainer
+            role="presentation"
+            onClick={themeConsumer.toggleTheme}
+          >
             {themeConsumer.theme === DARK ? sunImage : moonImage}
           </ThemeToggleContainer>
         </div>
