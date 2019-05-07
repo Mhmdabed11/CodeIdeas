@@ -69,7 +69,9 @@ const Layout = ({ children }) => {
         `}
       />
       <Header />
-      <MainWrapper>{theme ? <main>{children}</main> : null}</MainWrapper>
+      <MainWrapper aria-label="toggle between dark and light mode">
+        {theme ? <main>{children}</main> : null}
+      </MainWrapper>
       <footer />
     </Provider>
   )

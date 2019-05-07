@@ -11,7 +11,7 @@ const Profile = () => {
   return (
     <ProfileWrapper>
       <ImageWrapper>
-        <Image rounded={50} />
+        <Image alt="profile-picture" rounded={50} />
       </ImageWrapper>
 
       <Info>

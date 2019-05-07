@@ -20,7 +20,7 @@ export const BlogTitle = styled.h1`
   margin: 0;
 `
 export const ThemeToggleContainer = styled.button`
-  background-color: #ffffff;
+  background-color: transparent;
   border: none;
   font-size: 25px;
   height: 50px;

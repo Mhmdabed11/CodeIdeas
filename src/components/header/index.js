@@ -24,7 +24,6 @@ const Header2 = props => {
           <BlogTitle>{title}</BlogTitle>
         </BlogTitleLink>
         <div>
-          <img src={require("../../../assets/sun.png")} alt="sun" />
           <ThemeToggleContainer onClick={themeConsumer.toggleTheme}>
             {themeConsumer.theme === DARK ? sunImage : moonImage}
           </ThemeToggleContainer>
