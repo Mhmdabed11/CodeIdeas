@@ -59,7 +59,7 @@ typings/
 public
 
 # Mac files
-.DS_Stor
+.DS_Store
 
 # Yarn
 yarn-error.log
