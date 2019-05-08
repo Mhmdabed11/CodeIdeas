@@ -8,7 +8,6 @@ import {
   BlogTitleLink,
   Img,
 } from "./header.style"
-import { css } from "@emotion/core"
 const title = "CodeIdeas"
 const DARK = "dark"
 

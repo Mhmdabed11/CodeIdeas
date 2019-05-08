@@ -1,17 +1,5 @@
-//   <StaticQuery
-//     query={graphql`
-//       query SiteTitleQuery {
-//         site {
-//           siteMetadata {
-//             title
-//           }
-//         }
-//       }
-//     `}
-//     />
 import React from "react"
 import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
 import Header from "../header/index"
 import { css, Global } from "@emotion/core"
 import { MainWrapper } from "./index.style.js"
@@ -72,7 +60,21 @@ const Layout = ({ children }) => {
       <MainWrapper aria-label="toggle between dark and light mode">
         {theme ? <main>{children}</main> : null}
       </MainWrapper>
-      <footer />
+
+      {/* <footer>
+        <div>
+          <img
+            style={{ width: "32px", height: "auto" }}
+            src={require("../../../assets/twitter.svg")}
+          />
+        </div>
+        <div>
+          <img
+            style={{ width: "32px", height: "auto" }}
+            src={require("../../../assets/github.png")}
+          />
+        </div>
+      </footer> */}
     </Provider>
   )
 }

@@ -1,7 +1,6 @@
 import React from "react"
-import { StaticQuery, graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
-import { isAbsolute } from "path"
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
