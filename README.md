@@ -4,8 +4,4 @@ A personal blog where I share my ideas and thoughts about the latest web develop
 
 ## Run Locally
 
-- _Clone the repository_
-
-```sh
-Run npm install
-```
+- Clone the repository and run `sh npm install`
