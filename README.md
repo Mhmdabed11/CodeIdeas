@@ -4,4 +4,4 @@ A personal blog where I share my ideas and thoughts about the latest web develop
 
 ## Run Locally
 
-- Clone the repository and run `sh npm install`
+- Clone the repository and run `npm install`, then open `localhost:8000` in your browser.
