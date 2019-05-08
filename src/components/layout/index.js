@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import Header from "../header/index"
 import { css, Global } from "@emotion/core"
 import { MainWrapper } from "./index.style.js"
+import Footer from "../footer"
 
 const LIGHT = "light"
 const DARK = "dark"
@@ -61,20 +62,7 @@ const Layout = ({ children }) => {
         {theme ? <main>{children}</main> : null}
       </MainWrapper>
 
-      {/* <footer>
-        <div>
-          <img
-            style={{ width: "32px", height: "auto" }}
-            src={require("../../../assets/twitter.svg")}
-          />
-        </div>
-        <div>
-          <img
-            style={{ width: "32px", height: "auto" }}
-            src={require("../../../assets/github.png")}
-          />
-        </div>
-      </footer> */}
+      <Footer />
     </Provider>
   )
 }

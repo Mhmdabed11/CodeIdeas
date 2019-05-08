@@ -14,7 +14,9 @@ const Profile = () => {
       </ImageWrapper>
 
       <Info>
-        <TwitterLink href="https://www.twitter.com"> Mohammad Abed</TwitterLink>
+        <TwitterLink href="https://www.twitter.com/mhmdabed18" target="__blank">
+          Mohammad Abed
+        </TwitterLink>
         - Front End Engineer
         <br /> ReactJs enthusiast.
       </Info>
