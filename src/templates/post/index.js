@@ -19,7 +19,6 @@ export const query = graphql`
   }
 `
 const Post = ({ data: { mdx: post } }) => {
-  console.log(post)
   return (
     <Layout>
       <SEO

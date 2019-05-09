@@ -25,7 +25,6 @@ const Image = ({ size, rounded }) => {
       }
     }
   `)
-  console.log(data)
   return (
     <Img
       style={{
