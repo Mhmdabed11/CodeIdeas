@@ -8,7 +8,7 @@ export const HeaderContainer = styled.div`
 `
 export const HeaderWrapper = styled.div`
   max-width: 960px;
-  padding: 1.45rem 1.0875rem;
+  padding: 0.5rem 1.0875rem;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -45,5 +45,9 @@ export const BlogTitleLink = styled(Link)`
 export const Img = styled.img`
   width: 30px;
   height: 30px;
+  margin: 0;
+`
+export const Logo = styled.img`
+  width: 100px;
   margin: 0;
 `
