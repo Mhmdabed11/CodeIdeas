@@ -7,6 +7,8 @@ import {
   ThemeToggleContainer,
   BlogTitleLink,
   Img,
+  BlogLinks,
+  LeftSection,
 } from "./header.style"
 const title = "CodeIdeas"
 const DARK = "dark"
@@ -20,8 +22,15 @@ const Header2 = props => {
     <HeaderContainer>
       <HeaderWrapper>
         <BlogTitleLink to="/">
-          <BlogTitle>{title}</BlogTitle>
+          <BlogTitle>M.ABED</BlogTitle>
         </BlogTitleLink>
+
+        <BlogLinks>
+          <BlogTitleLink to="/blog">
+            <h3>Blog</h3>
+          </BlogTitleLink>
+        </BlogLinks>
+
         <div>
           <ThemeToggleContainer
             role="presentation"

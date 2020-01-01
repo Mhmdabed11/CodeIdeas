@@ -41,9 +41,19 @@ export const ThemeToggleContainer = styled.div`
 export const BlogTitleLink = styled(Link)`
   text-decoration: none;
   color: unset;
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+  }
 `
 export const Img = styled.img`
   width: 30px;
   height: 30px;
   margin: 0;
+`
+
+export const BlogLinks = styled.div`
+  align-items: center;
+  display: flex;
 `
