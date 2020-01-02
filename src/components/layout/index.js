@@ -54,7 +54,6 @@ const Layout = ({ children }) => {
             background-color: ${theme === LIGHT ? BG_LIGHT : BG_DARK};
             color: ${theme === LIGHT ? TYP_LIGHT : TYP_DARK};
             font-family: "Merriweather", "Georgia", serif;
-             transition: all 0.3s ease-in-out;
           }
         `}
       />
