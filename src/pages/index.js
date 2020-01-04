@@ -5,13 +5,15 @@ import SEO from "../components/seo"
 import styled from "@emotion/styled"
 import Project from "../components/project"
 
-const IntroHeader = styled.h1``
+const IntroHeader = styled.h1`
+  font-size: 40px;
+`
 const About = styled.h3`
   font-weight: 500;
 `
 
 const Projects = styled.div`
-  margin-top: 100px;
+  margin-top: 50px;
 `
 
 const projects = [
@@ -74,9 +76,9 @@ const IndexPage = () => {
       </About>
       <hr />
       <Projects>
-        <h2>
-          <u>Projects</u>
-        </h2>
+        <h1>
+          <u>Things I have done so far &#128187; &#128640;</u>
+        </h1>
 
         {renderProjects()}
       </Projects>

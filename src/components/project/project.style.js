@@ -25,8 +25,12 @@ export const InfoWrapper = styled.div`
     margin-top: 10px;
   }
 `
-export const Title = styled.h2``
-export const SubTitle = styled.p``
+export const Title = styled.h2`
+  margin-bottom: 10px;
+`
+export const SubTitle = styled.p`
+  margin-bottom: 15px;
+`
 
 export const ViewProjectLink = styled.a``
 export const GithubRepoLink = styled.a`
