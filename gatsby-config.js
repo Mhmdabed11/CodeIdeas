@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Code Ideas`,
+    title: `Mohammad Abed`,
     description: `A personal blog where I write about the latest news and technologies in web development.`,
     author: `@mhmdabed18`,
   },
@@ -51,13 +51,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Mohammad Abed`,
+        short_name: `Mabed`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/M.svg`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

@@ -65,7 +65,19 @@ const IndexPage = () => {
   }
   return (
     <Layout>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO
+        title="Home"
+        keywords={[
+          "blog",
+          "javascript",
+          "Mohammad Abed",
+          "Mohammad",
+          "Abed",
+          "Mabed",
+          `application`,
+          `react`,
+        ]}
+      />
       <IntroHeader>
         Hello, I am Mohammad Abed. I am a Front end developer and a Reactjs and
         JavaScript enthusiast.

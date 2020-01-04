@@ -24,7 +24,20 @@ const Blog = () => {
   `)
   return (
     <Layout>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO
+        title="Blog"
+        keywords={[
+          `blog`,
+          posts.allMdx.edges[0].node.frontmatter.title,
+          `application`,
+          `react`,
+          "react",
+          "javascript",
+          "Mohammad Abed",
+          "Mohammad",
+          "Abed",
+        ]}
+      />
       <Profile />
       {posts.allMdx.edges.map(edge => {
         return (
