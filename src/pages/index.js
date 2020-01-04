@@ -6,15 +6,13 @@ import styled from "@emotion/styled"
 import Project from "../components/project"
 
 const IntroHeader = styled.h1`
-  font-size: 40px;
+  font-size: 35px;
 `
 const About = styled.h3`
-  font-weight: 500;
+  font-weight: normal;
 `
 
-const Projects = styled.div`
-  margin-top: 50px;
-`
+const Projects = styled.div``
 
 const projects = [
   {
@@ -52,8 +50,9 @@ const projects = [
 const IndexPage = () => {
   const renderProjects = () => {
     return projects.map(
-      ({ title, subtitle, projectLink, githubLink, thumbnail }) => (
+      ({ title, subtitle, projectLink, githubLink, thumbnail }, index) => (
         <Project
+          key={index}
           title={title}
           subtitle={subtitle}
           projectLink={projectLink}
@@ -84,7 +83,8 @@ const IndexPage = () => {
       </IntroHeader>
       <About>
         I have around 2 years of professional experience in building web
-        applications with React, Gatsby and Nextjs.
+        applications with React, Gatsby and Nextjs. During my free time, I like
+        to do some exciting software projects !
       </About>
       <hr />
       <Projects>
