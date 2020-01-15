@@ -1,0 +1,30 @@
+[
+  {
+    "title": "React infinite Caoursel",
+    "subtitle": "A react infinite owl carousle inspired by Netflix UI.",
+    "projectLink": "https://mhmdabed11.github.io/react-carousel/",
+    "githubLink": "https://github.com/Mhmdabed11/react-carousel",
+    "thumbnail": "/react-carousel.JPG"
+  },
+  {
+    "title": "Cinema today",
+    "subtitle": "A NextJs app which showcases different categories of movies and their information using themoviedb.org.",
+    "projectLink": "https://my-nextjs-app.mohammadaabed.now.sh/",
+    "githubLink": "https://github.com/Mhmdabed11/cinema-today",
+    "thumbnail": "/Capture.PNG"
+  },
+  {
+    "title": "Github Projects Clone",
+    "subtitle": "A react app clone of github projects using react-beautiful-dnd.",
+    "projectLink": "https://mhmdabed11.github.io/github-projects-clone/",
+    "githubLink": "https://github.com/Mhmdabed11/github-projects-clone",
+    "thumbnail": "./gprojects.JPG"
+  },
+  {
+    "title": "Shortest Path (BFS)",
+    "subtitle": "An app which finds the shortest path between two points in an unweighted graph",
+    "projectLink": "https://mhmdabed11.github.io/algo-visualizer/",
+    "githubLink": "https://github.com/Mhmdabed11/algo-visualizer",
+    "thumbnail": "./algo-visualizer.PNG"
+  }
+]

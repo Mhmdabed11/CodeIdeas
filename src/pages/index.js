@@ -4,7 +4,7 @@ import Layout from "../components/layout/index"
 import SEO from "../components/seo"
 import styled from "@emotion/styled"
 import Project from "../components/project"
-
+import { graphql } from "gatsby"
 const IntroHeader = styled.h1`
   font-size: 35px;
 `
@@ -14,53 +14,21 @@ const About = styled.h3`
 
 const Projects = styled.div``
 
-const projects = [
-  {
-    title: "React infinite Caoursel",
-    subtitle: "A react infinite owl carousle inspired by Netflix UI.",
-    projectLink: "https://mhmdabed11.github.io/react-carousel/",
-    githubLink: "https://github.com/Mhmdabed11/react-carousel",
-    thumbnail: "/react-carousel.JPG",
-  },
-  {
-    title: "Cinema today",
-    subtitle:
-      "A NextJs app which showcases different categories of movies and their information using themoviedb.org.",
-    projectLink: "https://my-nextjs-app.mohammadaabed.now.sh/",
-    githubLink: "https://github.com/Mhmdabed11/cinema-today",
-    thumbnail: "/Capture.PNG",
-  },
-  {
-    title: "Github Projects Clone",
-    subtitle: "A react app clone of github projects using react-beautiful-dnd.",
-    projectLink: "https://mhmdabed11.github.io/github-projects-clone/",
-    githubLink: "https://github.com/Mhmdabed11/github-projects-clone",
-    thumbnail: "./gprojects.JPG",
-  },
-  {
-    title: "Shortest Path (BFS)",
-    subtitle:
-      "An app which finds the shortest path between two points in an unweighted graph",
-    projectLink: "https://mhmdabed11.github.io/algo-visualizer/",
-    githubLink: "https://github.com/Mhmdabed11/algo-visualizer",
-    thumbnail: "./algo-visualizer.PNG",
-  },
-]
-
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
+  console.log(data.allProjectsJson.edges)
   const renderProjects = () => {
-    return projects.map(
-      ({ title, subtitle, projectLink, githubLink, thumbnail }, index) => (
+    return data.allProjectsJson.edges.map((node, index) => {
+      return (
         <Project
           key={index}
-          title={title}
-          subtitle={subtitle}
-          projectLink={projectLink}
-          githubLink={githubLink}
-          thumbnail={thumbnail}
+          title={node.node.title}
+          subtitle={node.node.subtitle}
+          projectLink={node.node.projectLink}
+          githubLink={node.node.githubLink}
+          thumbnail={node.node.thumbnail}
         />
       )
-    )
+    })
   }
   return (
     <Layout>
@@ -99,3 +67,19 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+export const query = graphql`
+  query ProjectsQuery {
+    allProjectsJson {
+      edges {
+        node {
+          title
+          subtitle
+          projectLink
+          githubLink
+          thumbnail
+        }
+      }
+    }
+  }
+`
