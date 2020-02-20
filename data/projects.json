@@ -1,5 +1,12 @@
 [
   {
+    "title": "FastCash",
+    "subtitle": "A web app which allows users to post and find jobs worldwide.",
+    "projectLink": "http://15.188.8.145:3000/",
+    "githubLink": "https://github.com/Mhmdabed11/fastcash",
+    "thumbnail": "/fastcash.PNG"
+  },
+  {
     "title": "React infinite Caoursel",
     "subtitle": "A react infinite owl carousle inspired by Netflix UI.",
     "projectLink": "https://mhmdabed11.github.io/react-carousel/",
