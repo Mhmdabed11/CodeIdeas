@@ -10,7 +10,7 @@
     "@mdx-js/mdx": "^1.0.16",
     "@mdx-js/react": "^1.0.0-rc.5",
     "bootstrap": "^4.3.1",
-    "gatsby": "^2.4.2",
+    "gatsby": "^2.19.19",
     "gatsby-image": "^2.0.41",
     "gatsby-mdx": "^0.6.3",
     "gatsby-plugin-google-analytics": "^2.1.33",
