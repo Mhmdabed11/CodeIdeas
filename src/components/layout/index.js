@@ -17,16 +17,15 @@ const Layout = ({ children }) => {
   const [theme, setTheme] = React.useState(null)
   // toggle theme function using React.useCallback to memoize version of function and not create one on each render
   React.useLayoutEffect(() => {
-    const mode = localStorage.getItem("mode")
-    if (mode) setTheme(mode)
-    else setTheme(LIGHT)
+    if (window) {
+      setTheme(window.__theme)
+      window.__onThemeChange = () => {
+        setTheme(window.__theme)
+      }
+    }
   }, [])
   const toggleTheme = React.useCallback(() => {
-    theme === LIGHT ? setTheme(DARK) : setTheme(LIGHT)
-  }, [theme])
-
-  React.useEffect(() => {
-    localStorage.setItem("mode", theme)
+    window.__setPreferredTheme(theme !== DARK ? "dark" : "light")
   }, [theme])
 
   const value = React.useMemo(() => {
@@ -51,15 +50,22 @@ const Layout = ({ children }) => {
             padding: 0;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            background-color: ${theme === LIGHT ? BG_LIGHT : BG_DARK};
-            color: ${theme === LIGHT ? TYP_LIGHT : TYP_DARK};
             font-family: "Merriweather", "Georgia", serif;
+            transition: background-color 0.2s ease-in;
+          }
+          .light {
+            background-color: ${BG_LIGHT};
+            color: ${TYP_LIGHT};
+          }
+          .dark {
+            background-color: ${BG_DARK};
+            color: ${TYP_DARK};
           }
         `}
       />
       <Header />
       <MainWrapper aria-label="toggle between dark and light mode">
-        {theme ? <main>{children}</main> : null}
+        <main>{children}</main>
       </MainWrapper>
 
       <Footer />

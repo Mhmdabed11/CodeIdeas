@@ -23,7 +23,7 @@ const Blog = () => {
     }
   `)
   return (
-    <Layout>
+    <>
       <SEO
         title="Blog"
         keywords={[
@@ -50,7 +50,7 @@ const Blog = () => {
           />
         )
       })}
-    </Layout>
+    </>
   )
 }
 

@@ -20,20 +20,6 @@ export const BlogTitle = styled.h1`
   margin: 0;
 `
 export const ThemeToggleContainer = styled.div`
-  background-color: transparent;
-  border: none;
-  font-size: 25px;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  line-height: 50px;
-  &:focus {
-    box-shadow: 0 0 2px 3px #ffa7c4;
-    outline: none;
-  }
-  &:active {
-    box-shadow: 0 0 2px 3px #ffa7c4;
-  }
   display: flex;
   align-items: center;
   justify-content: center;

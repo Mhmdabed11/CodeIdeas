@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-mdx"
-import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import { PostTitle, PostDate } from "../../components/post card/postcard.style"
 import { css } from "@emotion/core"
@@ -20,7 +19,7 @@ export const query = graphql`
 `
 const Post = ({ data: { mdx: post } }) => {
   return (
-    <Layout>
+    <>
       <SEO
         title={post.frontmatter.title}
         keywords={[`gatsby`, `application`, `react`]}
@@ -30,7 +29,7 @@ const Post = ({ data: { mdx: post } }) => {
       {/* //break line */}
       <br />
       <MDXRenderer>{post.code.body}</MDXRenderer>
-    </Layout>
+    </>
   )
 }
 export default Post

@@ -8,15 +8,15 @@ import {
   BlogTitleLink,
   Img,
   BlogLinks,
-  Logo,
 } from "./header.style"
-const title = "CodeIdeas"
+import Switch from "../switch"
 const DARK = "dark"
 
 const moonImage = <Img src={require("../../../assets/moon.png")} alt="moon" />
 const sunImage = <Img src={require("../../../assets/sun.png")} alt="sun" />
 const Header2 = props => {
   const themeConsumer = React.useContext(ThemeContext)
+
   return (
     <HeaderContainer>
       <HeaderWrapper>
@@ -30,14 +30,12 @@ const Header2 = props => {
           </BlogTitleLink>
         </BlogLinks>
 
-        <div>
-          <ThemeToggleContainer
-            role="presentation"
-            onClick={themeConsumer.toggleTheme}
-          >
-            {themeConsumer.theme === DARK ? sunImage : moonImage}
-          </ThemeToggleContainer>
-        </div>
+        <ThemeToggleContainer role="presentation">
+          <Switch
+            isOn={themeConsumer.theme === DARK}
+            onToggle={themeConsumer.toggleTheme}
+          />
+        </ThemeToggleContainer>
       </HeaderWrapper>
     </HeaderContainer>
   )

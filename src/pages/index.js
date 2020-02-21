@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import styled from "@emotion/styled"
 import Project from "../components/project"
 import { graphql } from "gatsby"
+
 const IntroHeader = styled.h1`
   font-size: 35px;
 `
@@ -15,7 +16,6 @@ const About = styled.h3`
 const Projects = styled.div``
 
 const IndexPage = ({ data }) => {
-  console.log(data.allProjectsJson.edges)
   const renderProjects = () => {
     return data.allProjectsJson.edges.map((node, index) => {
       return (
@@ -31,7 +31,7 @@ const IndexPage = ({ data }) => {
     })
   }
   return (
-    <Layout>
+    <>
       <SEO
         title="Home"
         keywords={[
@@ -49,6 +49,7 @@ const IndexPage = ({ data }) => {
         Hello, I am Mohammad Abed. I am a Front end developer and a Reactjs and
         JavaScript enthusiast.
       </IntroHeader>
+
       <About>
         I have around 2 years of professional experience in building web
         applications with React, Gatsby and Nextjs. During my free time, I like
@@ -62,7 +63,7 @@ const IndexPage = ({ data }) => {
 
         {renderProjects()}
       </Projects>
-    </Layout>
+    </>
   )
 }
 
