@@ -30,13 +30,6 @@ export const Thumbnail = styled.div`
   }
 `
 
-export const ThumbnailImage = styled.img`
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: 50% 50%;
-  border-radius: 10px;
-`
 export const InfoWrapper = styled.div`
   padding: 16px;
   @media only screen and (max-width: 1000px) {
