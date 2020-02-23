@@ -16,8 +16,10 @@ const About = styled.h3`
 const Projects = styled.div``
 
 const IndexPage = ({ data }) => {
+  console.log(data)
   const renderProjects = () => {
     return data.allProjectsJson.edges.map((node, index) => {
+      console.log(node)
       return (
         <Project
           key={index}
@@ -25,7 +27,9 @@ const IndexPage = ({ data }) => {
           subtitle={node.node.subtitle}
           projectLink={node.node.projectLink}
           githubLink={node.node.githubLink}
-          thumbnail={node.node.thumbnail}
+          thumbnail={
+            node.node.thumbnail && node.node.thumbnail.childImageSharp.fluid
+          }
         />
       )
     })
@@ -78,7 +82,13 @@ export const query = graphql`
           subtitle
           projectLink
           githubLink
-          thumbnail
+          thumbnail {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
+          }
         }
       }
     }

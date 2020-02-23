@@ -1,4 +1,5 @@
 import React from "react"
+import Img from "gatsby-image"
 import {
   Container,
   Thumbnail,
@@ -20,7 +21,16 @@ export default function Project({
   return (
     <Container>
       <Thumbnail>
-        <ThumbnailImage src={thumbnail} alt={title} />
+        <Img
+          fluid={thumbnail}
+          style={{
+            height: "100%",
+            width: "100%",
+            borderRadius: "10px",
+            objectFit: "cover",
+            objectPosition: "50% 50%",
+          }}
+        />
       </Thumbnail>
 
       <InfoWrapper>
