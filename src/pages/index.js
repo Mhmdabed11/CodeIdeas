@@ -1,6 +1,4 @@
 import React from "react"
-
-import Layout from "../components/layout/index"
 import SEO from "../components/seo"
 import styled from "@emotion/styled"
 import Project from "../components/project"
@@ -16,10 +14,8 @@ const About = styled.h3`
 const Projects = styled.div``
 
 const IndexPage = ({ data }) => {
-  console.log(data)
   const renderProjects = () => {
     return data.allProjectsJson.edges.map((node, index) => {
-      console.log(node)
       return (
         <Project
           key={index}
@@ -49,6 +45,7 @@ const IndexPage = ({ data }) => {
           `react`,
         ]}
       />
+
       <IntroHeader>
         Hello, I am Mohammad Abed. I am a Front end developer and a Reactjs and
         JavaScript enthusiast.

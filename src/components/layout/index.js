@@ -4,6 +4,7 @@ import Header from "../header/index"
 import { css, Global } from "@emotion/core"
 import { MainWrapper } from "./index.style.js"
 import Footer from "../footer"
+import Animation from "../animation"
 
 const LIGHT = "light"
 const DARK = "dark"
@@ -64,6 +65,7 @@ const Layout = ({ children }) => {
         `}
       />
       <Header />
+      <Animation />
       <MainWrapper aria-label="toggle between dark and light mode">
         <main>{children}</main>
       </MainWrapper>
