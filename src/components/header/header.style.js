@@ -1,7 +1,7 @@
 import styled from "@emotion/styled"
 import { Link } from "gatsby"
 export const HeaderContainer = styled.div`
-  background-color: #000000;
+  background-color: #0f1b34;
   color: #ffffff;
   width: 100%;
   display: block;
@@ -18,6 +18,7 @@ export const BlogTitle = styled.h1`
   font-weight: 900;
   text-rendering: optimizeLegibility;
   margin: 0;
+  color: rgba(255, 255, 255, 0.8);
 `
 export const ThemeToggleContainer = styled.div`
   display: flex;
@@ -31,6 +32,7 @@ export const BlogTitleLink = styled(Link)`
   h2,
   h3 {
     margin: 0;
+    color: rgba(255, 255, 255, 0.8);
   }
 `
 export const Img = styled.img`

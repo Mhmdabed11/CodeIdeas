@@ -13,15 +13,15 @@ export const Toggler = styled.div`
   width: 16px;
   border-radius: 50%;
   border: none;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.8);
   position: relative;
-  transform: ${props => (!props.checked ? "scale(1.3)" : "")};
+  transform: ${props => (props.checked ? "scale(1.3)" : "")};
   transition: all 0.35s ease;
 
   &:after {
     box-shadow: ${props =>
-      props.checked
-        ? "0 -13px 0 #fff, 0 13px 0 #fff, 13px 0 0 #fff, -13px 0 0 #fff,9px 9px 0 #fff, -9px 9px 0 #fff, 9px -9px 0 #fff, -9px -9px 0 #fff;"
+      !props.checked
+        ? "0 -13px 0 rgba(255, 255, 255, 0.8), 0 13px 0 rgba(255, 255, 255, 0.8), 13px 0 0 rgba(255, 255, 255, 0.8), -13px 0 0 rgba(255, 255, 255, 0.8),9px 9px 0 rgba(255, 255, 255, 0.8), -9px 9px 0 rgba(255, 255, 255, 0.8), 9px -9px 0 rgba(255, 255, 255, 0.8), -9px -9px 0 rgba(255, 255, 255, 0.8);"
         : "none"};
     content: "";
     width: 4px;
@@ -38,11 +38,11 @@ export const Toggler = styled.div`
     content: "";
     width: 16px;
     height: 16px;
-    background-color: black;
+    background-color: #0f1b34;
     position: absolute;
     border-radius: 50%;
-    top: ${props => (props.checked ? "-100%" : "-6px")};
-    right: ${props => (props.checked ? "-100%" : "-6px")};
+    top: ${props => (!props.checked ? "-100%" : "-6px")};
+    right: ${props => (!props.checked ? "-100%" : "-6px")};
     border-color: #fff;
     transition: all 0.35s ease;
   }
