@@ -51,7 +51,6 @@ const Layout = ({ children }) => {
             padding: 0;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            font-family: "Merriweather", "Georgia", serif;
             transition: background-color 0.2s ease-in;
           }
           .light {

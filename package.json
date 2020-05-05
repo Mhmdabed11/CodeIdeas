@@ -31,6 +31,7 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-typography": "^0.16.19",
+    "typeface-rubik": "0.0.72",
     "typography": "^0.16.19"
   },
   "devDependencies": {

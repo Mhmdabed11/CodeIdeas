@@ -13,13 +13,18 @@ const About = styled.h3`
   font-weight: normal;
 `
 
-const Projects = styled.div``
+const Projects = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 25px;
+  @media only screen and (max-width: 850px) {
+    grid-template-columns: 1fr;
+  }
+`
 
 const IndexPage = ({ data }) => {
-  console.log(data)
   const renderProjects = () => {
     return data.allProjectsJson.edges.map((node, index) => {
-      console.log(node)
       return (
         <Project
           key={index}
@@ -45,8 +50,8 @@ const IndexPage = ({ data }) => {
           "Mohammad",
           "Abed",
           "Mabed",
-          `application`,
-          `react`,
+          "application",
+          "react",
         ]}
       />
       <IntroHeader>
@@ -60,13 +65,10 @@ const IndexPage = ({ data }) => {
         to do some exciting software projects !
       </About>
       <hr />
-      <Projects>
-        <h1>
-          <u>Things I have done so far &#128187; &#128640;</u>
-        </h1>
-
-        {renderProjects()}
-      </Projects>
+      <h1>
+        <u>Things I have done so far &#128187; &#128640;</u>
+      </h1>
+      <Projects>{renderProjects()}</Projects>
     </>
   )
 }

@@ -27,6 +27,7 @@ export default function Project({
             height: "100%",
             width: "100%",
             borderRadius: "10px",
+            border: "1px solid #f9f9f9",
             objectFit: "cover",
             objectPosition: "50% 50%",
           }}
