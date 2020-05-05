@@ -4,14 +4,17 @@ import Header from "../header/index"
 import { css, Global } from "@emotion/core"
 import { MainWrapper } from "./index.style.js"
 import Footer from "../footer"
+import { ThemeProvider } from "emotion-theming"
 
 const LIGHT = "light"
 const DARK = "dark"
-// const BG_DARK = "#10171e"
 const BG_DARK = "#0f1b34"
 const BG_LIGHT = "#e6ecf0"
 const TYP_DARK = "rgba(255,255,255,0.8)"
 const TYP_LIGHT = "#14171a"
+const UITheme = {
+  color: "yellow",
+}
 export const ThemeContext = React.createContext()
 const { Provider } = ThemeContext
 const Layout = ({ children }) => {
@@ -38,37 +41,39 @@ const Layout = ({ children }) => {
 
   return (
     <Provider value={value}>
-      <Global
-        styles={css`
-          html {
-            -ms-text-size-adjust: 100%;
-            -webkit-text-size-adjust: 100%;
-            margin: 0;
-            padding: 0;
-          }
-          body {
-            margin: 0;
-            padding: 0;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            transition: background-color 0.2s ease-in;
-          }
-          .light {
-            background-color: ${BG_LIGHT};
-            color: ${TYP_LIGHT};
-          }
-          .dark {
-            background-color: ${BG_DARK};
-            color: ${TYP_DARK};
-          }
-        `}
-      />
-      <Header />
-      <MainWrapper aria-label="toggle between dark and light mode">
-        <main>{children}</main>
-      </MainWrapper>
+      <ThemeProvider theme={UITheme}>
+        <Global
+          styles={css`
+            html {
+              -ms-text-size-adjust: 100%;
+              -webkit-text-size-adjust: 100%;
+              margin: 0;
+              padding: 0;
+            }
+            body {
+              margin: 0;
+              padding: 0;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+              transition: background-color 0.2s ease-in;
+            }
+            .light {
+              background-color: ${BG_LIGHT};
+              color: ${TYP_LIGHT};
+            }
+            .dark {
+              background-color: ${BG_DARK};
+              color: ${TYP_DARK};
+            }
+          `}
+        />
+        <Header />
+        <MainWrapper aria-label="toggle between dark and light mode">
+          <main>{children}</main>
+        </MainWrapper>
 
-      <Footer />
+        <Footer />
+      </ThemeProvider>
     </Provider>
   )
 }
